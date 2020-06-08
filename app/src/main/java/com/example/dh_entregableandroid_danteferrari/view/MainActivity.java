@@ -1,4 +1,4 @@
-package com.example.dh_entregableandroid_danteferrari;
+package com.example.dh_entregableandroid_danteferrari.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +9,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.example.dh_entregableandroid_danteferrari.R;
+import com.example.dh_entregableandroid_danteferrari.model.Item;
+import com.example.dh_entregableandroid_danteferrari.view.AboutUsFragment;
+import com.example.dh_entregableandroid_danteferrari.view.DetailFragment;
+import com.example.dh_entregableandroid_danteferrari.view.RecylerViewFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements RecylerViewFragment.RecyclerViewFragmentListener {
@@ -39,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements RecylerViewFragme
                 }
 
                 drawerLayoutMainActivity.closeDrawers();
-                
+
                 return true;
             }
         });
@@ -54,11 +58,11 @@ public class MainActivity extends AppCompatActivity implements RecylerViewFragme
     }
 
     @Override
-    public void onClickProductoDesdeFragment(Producto producto) {
+    public void onClickProductoDesdeFragment(Item item) {
         Bundle unBundle = new Bundle();
         DetailFragment detailFragment = new DetailFragment();
 
-        unBundle.putSerializable(DetailFragment.PRODUCTO, producto);
+        unBundle.putSerializable(DetailFragment.PRODUCTO, item);
         detailFragment.setArguments(unBundle);
 
         pegarFragment(detailFragment);

@@ -1,4 +1,7 @@
-package com.example.dh_entregableandroid_danteferrari;
+package com.example.dh_entregableandroid_danteferrari.dao;
+
+import com.example.dh_entregableandroid_danteferrari.R;
+import com.example.dh_entregableandroid_danteferrari.model.Producto;
 
 import java.util.ArrayList;
 import java.util.List;

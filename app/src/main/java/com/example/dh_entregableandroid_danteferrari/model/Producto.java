@@ -1,4 +1,4 @@
-package com.example.dh_entregableandroid_danteferrari;
+package com.example.dh_entregableandroid_danteferrari.model;
 
 import java.io.Serializable;
 

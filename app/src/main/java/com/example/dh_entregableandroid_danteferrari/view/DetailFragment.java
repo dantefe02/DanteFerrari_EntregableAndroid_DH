@@ -1,4 +1,4 @@
-package com.example.dh_entregableandroid_danteferrari;
+package com.example.dh_entregableandroid_danteferrari.view;
 
 import android.os.Bundle;
 
@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.dh_entregableandroid_danteferrari.model.Producto;
+import com.example.dh_entregableandroid_danteferrari.R;
 
 
 /**

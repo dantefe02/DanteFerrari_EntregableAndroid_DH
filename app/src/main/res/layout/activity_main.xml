@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#512DA8"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <FrameLayout
         android:id="@+id/activityMain_FrameLayout_ContenedorFragment"
