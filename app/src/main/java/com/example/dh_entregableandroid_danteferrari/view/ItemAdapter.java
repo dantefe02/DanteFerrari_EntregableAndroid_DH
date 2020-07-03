@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.dh_entregableandroid_danteferrari.R;
 import com.example.dh_entregableandroid_danteferrari.model.Item;
 
@@ -17,7 +18,7 @@ import java.util.List;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolderItem> {
 
     private List<Item> itemList;
-    
+
     private ItemAdapterListener itemAdapterListener;
 
     public ItemAdapter(List<Item> itemList, ItemAdapterListener itemAdapterListener) {
@@ -74,9 +75,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolderItem
         }
 
         public void cargarValor(Item item) {
-            //imagenItem.setImageResource(item.getImagen());
+
+            Glide.with(itemView).load(item.getThumbnail()).error(R.drawable.ic_launcher_foreground).into(imagenItem);
             nombreItem.setText(item.getTitle());
-            precioItem.setText("$" + item.getPrice().toString());
+            precioItem.setText("$ " + item.getPrice().toString());
+
         }
 
     }
@@ -85,11 +88,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolderItem
         public void onClickItem(Item item);
     }
 
-    public void SetItemList (List<Item> itemList) {
+    public void SetItemList(List<Item> itemList) {
         this.itemList = itemList;
         notifyDataSetChanged();
     }
-
 
 
 }

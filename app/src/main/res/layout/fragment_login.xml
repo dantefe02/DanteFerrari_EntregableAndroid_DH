@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/colorAccent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35dp"
+        android:layout_marginBottom="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="¡Bienvenido a Mercado Esclavo!"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Si ya tenes una cuenta, completa:"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+        <!--app:hintTextColor="@color/colorAccent"-->
+
+        <EditText
+            android:id="@+id/FragmentLogin_EditText_Email"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electronico"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/FragmentLogin_EditText_Password"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/FragmentLogin_Button_IniciarSesion"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#000"
+        android:text="Inicia Sesión"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="No tenés una cuenta de MercadoEsclavo?"/>
+    <Button
+        android:id="@+id/FragmentLogin_Button_Registrate"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="#000"
+        android:text="Registrate"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -20,6 +20,24 @@ public class Item implements Serializable {
     private String title;
     private Double price;
     private String thumbnail;
+    private boolean accepts_mercadopago;
+
+    public boolean isAccepts_mercadopago() {
+        return accepts_mercadopago;
+    }
+
+    public void setAccepts_mercadopago(boolean accepts_mercadopago) {
+        this.accepts_mercadopago = accepts_mercadopago;
+    }
+
+    public Item(String id, String siteId, String title, Double price, String thumbnail, boolean accepts_mercadopago) {
+        this.id = id;
+        this.siteId = siteId;
+        this.title = title;
+        this.price = price;
+        this.thumbnail = thumbnail;
+        this.accepts_mercadopago = accepts_mercadopago;
+    }
 
     public String getThumbnail() {
         return thumbnail;

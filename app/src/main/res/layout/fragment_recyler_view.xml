@@ -6,14 +6,6 @@
     android:orientation="vertical"
     tools:context=".view.RecylerViewFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LISTA DE PRODUCTOS"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragmentRecyclerView_RecyclerView"
         android:layout_width="match_parent"

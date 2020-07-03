@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements RecylerViewFragme
 
         final RecylerViewFragment recylerViewFragment = new RecylerViewFragment();
         final AboutUsFragment aboutUsFragment = new AboutUsFragment();
+        final LoginFragment loginFragment = new LoginFragment();
+        final RegistrateFragment registrateFragment = new RegistrateFragment();
+
         pegarFragment(recylerViewFragment);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -40,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements RecylerViewFragme
                 switch (item.getItemId()){
                     case R.id.AboutUs:
                         pegarFragment(aboutUsFragment);
+                    case R.id.Perfil:
+                            pegarFragment(registrateFragment);
                 }
 
                 drawerLayoutMainActivity.closeDrawers();
@@ -62,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements RecylerViewFragme
         Bundle unBundle = new Bundle();
         DetailFragment detailFragment = new DetailFragment();
 
-        unBundle.putSerializable(DetailFragment.PRODUCTO, item);
+        unBundle.putSerializable(DetailFragment.ITEM, item);
         detailFragment.setArguments(unBundle);
 
         pegarFragment(detailFragment);
