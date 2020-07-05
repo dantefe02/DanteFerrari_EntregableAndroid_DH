@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@color/Blanquito"
     android:gravity="center"
-    android:background="@color/colorAccent">
+    android:orientation="vertical">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="35dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="¡Bienvenido a Mercado Esclavo!"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:text="¡Bienvenido a Mercado Esclavo!"
-        />
+        android:textSize="35dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="25dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
+        android:text="Si ya tenes una cuenta, completa:"
+        android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:text="Si ya tenes una cuenta, completa:"/>
+        android:textSize="25dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp">
-        <!--app:hintTextColor="@color/colorAccent"-->
+        android:layout_marginTop="10dp"
+        app:hintTextColor="#FF8400">
 
         <EditText
             android:id="@+id/FragmentLogin_EditText_Email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="Correo Electronico"
-            android:inputType="textEmailAddress" />
+            />
+            <!--android:inputType="textEmailAddress"-->
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -58,8 +59,8 @@
             android:id="@+id/FragmentLogin_EditText_Password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:hint="Contraseña"/>
+            <!--android:inputType="textPassword"-->
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -72,22 +73,25 @@
         android:text="Inicia Sesión"
         android:textColor="#FFF"
         android:textSize="18sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="25dp"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="10dp"
-        android:text="No tenés una cuenta de MercadoEsclavo?"/>
+        android:text="No tenés una cuenta de MercadoEsclavo?"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25dp" />
+
     <Button
         android:id="@+id/FragmentLogin_Button_Registrate"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:background="#000"
         android:text="Registrate"
         android:textColor="#FFF"

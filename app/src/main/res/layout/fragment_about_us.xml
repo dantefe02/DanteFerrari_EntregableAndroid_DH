@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AboutUsFragment">
+    tools:context=".view.AboutUsFragment"
+    android:background="@color/Blanquito"
+    android:id="@+id/AboutUs">
 
     <TextView
         android:layout_width="match_parent"

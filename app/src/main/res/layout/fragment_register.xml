@@ -5,10 +5,10 @@
     android:id="@+id/formContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.RegistrateFragment"
+    tools:context=".view.RegisterFragment"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:background="@color/colorAccent"
+    android:background="@color/Blanquito"
     android:gravity="center">
     <TextView
         android:layout_width="wrap_content"
@@ -24,62 +24,47 @@
 
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/useranme"
-        app:layout_constraintTop_toBottomOf="@+id/password1"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="7dp"
-        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="Username"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/firstName"
+        android:id="@+id/Nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp">
+        android:layout_marginBottom="16dp">
 
         <EditText
-            android:id="@+id/editTextRegisterFirstName"
+            android:id="@+id/FragmentRegister_EditText_Nombre"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="First Name"
+            android:hint="Nombre"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lastName"
-        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        android:id="@+id/Apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp">
+        android:layout_marginBottom="16dp">
 
         <EditText
-            android:id="@+id/editTextRegisterLastName"
+            android:id="@+id/FragmentRegister_EditText_Apellido"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Last Name"
+            android:hint="Apellido"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp">
+        android:layout_marginBottom="16dp">
 
         <EditText
-            android:id="@+id/editTextRegisterEMail"
+            android:id="@+id/FragmentRegister_EditText_Email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -88,13 +73,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password1"
+        android:id="@+id/password"
         app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/editTextRegisterPassword1"
+            android:id="@+id/FragmentRegister_EditText_Password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -103,37 +88,30 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="300dp"
+        android:id="@+id/FragmentRegister_Button_Listo"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:background="@color/colorPrimaryDark"
         android:text="LISTO!"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/Blanquito"
         android:textSize="20sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:text="Ya tenes una cuenta?" />
 
-        <!--<com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:text="Already have an account?" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/FragmentRegister_TextView_IniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesion"
+        android:textSize="16dp"
+        android:textColor="@color/colorAccent" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/signInText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign in"
-            android:textColor="@color/colorAccent" />-->
-
-    </LinearLayout>
 
 
 </LinearLayout>

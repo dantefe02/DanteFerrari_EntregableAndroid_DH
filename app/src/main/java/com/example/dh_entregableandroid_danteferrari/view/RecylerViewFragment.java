@@ -57,10 +57,14 @@ public class RecylerViewFragment extends Fragment implements ItemAdapter.ItemAda
             public void onFinish(ItemContainer result) {
                 UpdateList(result);
             }
+
+            @Override
+            public void onError(String mensaje) {
+
+            }
         });
 
 
-        //List<Producto> productoList = ProvedorDeProductos.getProductos();
         itemAdapter = new ItemAdapter(itemList, this);
         itemAdapter.notifyDataSetChanged();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(), RecyclerView.VERTICAL, false);
@@ -74,11 +78,11 @@ public class RecylerViewFragment extends Fragment implements ItemAdapter.ItemAda
 
     @Override
     public void onClickItem(Item item) {
-        recyclerViewFragmentListener.onClickProductoDesdeFragment(item);
+        recyclerViewFragmentListener.onClickProductoDesdeRecyclerFragment(item);
     }
 
     public interface RecyclerViewFragmentListener {
-        public void onClickProductoDesdeFragment(Item item);
+        public void onClickProductoDesdeRecyclerFragment(Item item);
     }
 
     private void UpdateList(ItemContainer itemContainer) {

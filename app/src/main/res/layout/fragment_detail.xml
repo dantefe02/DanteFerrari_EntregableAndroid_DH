@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.DetailFragment">
+    tools:context=".view.DetailFragment"
+    android:background="@color/colorPrimaryDark">
 
     <ImageView
         android:id="@+id/FragmentDetail_ImageView_ImagenProducto"
@@ -41,6 +42,14 @@
         android:text="Acepta mercado pago"
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar a favoritos"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="15dp"
+
+        android:id="@+id/FragmentDetail_Button_AgregarFavoritos" />
 
 
 </LinearLayout>

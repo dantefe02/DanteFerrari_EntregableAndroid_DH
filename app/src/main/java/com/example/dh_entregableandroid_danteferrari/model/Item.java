@@ -30,6 +30,9 @@ public class Item implements Serializable {
         this.accepts_mercadopago = accepts_mercadopago;
     }
 
+    public Item() {
+    }
+
     public Item(String id, String siteId, String title, Double price, String thumbnail, boolean accepts_mercadopago) {
         this.id = id;
         this.siteId = siteId;
@@ -78,4 +81,5 @@ public class Item implements Serializable {
     public void setPrice(Double price) {
         this.price = price;
     }
+
 }

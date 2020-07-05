@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "539103510272",
+    "firebase_url": "https://dhentregable.firebaseio.com",
+    "project_id": "dhentregable",
+    "storage_bucket": "dhentregable.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539103510272:android:e257a149889f7bf9367de5",
+        "android_client_info": {
+          "package_name": "com.example.dh_entregableandroid_danteferrari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539103510272-vnf3jr5uluhn1uitqs4h52j0qf196hfd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dh_entregableandroid_danteferrari",
+            "certificate_hash": "b232af6cce1a219d58e9eee8c59e28a1c62156d5"
+          }
+        },
+        {
+          "client_id": "539103510272-hfgm55htrhe5c7k5ltbkl6qblnqedm6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRCAPuC8A2m3MgZ5it0tp9gg1ZJG-KL6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539103510272-hfgm55htrhe5c7k5ltbkl6qblnqedm6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
