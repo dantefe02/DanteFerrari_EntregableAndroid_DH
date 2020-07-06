@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/Inicio"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Inicio" />
+    <item
         android:id="@+id/Perfil"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="Perfil" />
@@ -10,6 +14,7 @@
         android:id="@+id/AboutUs"
         android:icon="@drawable/ic_person_pin_black_24dp"
         android:title="About Us" />
+
 
 
 </menu>

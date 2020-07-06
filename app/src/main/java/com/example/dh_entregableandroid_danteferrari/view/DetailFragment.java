@@ -17,6 +17,7 @@ import com.example.dh_entregableandroid_danteferrari.controller.UsuarioControlle
 import com.example.dh_entregableandroid_danteferrari.model.Item;
 import com.example.dh_entregableandroid_danteferrari.model.Producto;
 import com.example.dh_entregableandroid_danteferrari.R;
+import com.example.dh_entregableandroid_danteferrari.model.UsuarioME;
 import com.example.dh_entregableandroid_danteferrari.util.ResultListener;
 
 
@@ -60,35 +61,87 @@ public class DetailFragment extends Fragment {
 
         textViewNombreProducto.setText(item.getTitle());
         textViewPrecioProducto.setText("$  " + item.getPrice().toString());
-
+        checkItemFav(item);
 
         ifAcceptsMercadoPago(item, textViewMercadoPago);
-        buttonAgregarFavoritos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                usuarioController.agregarItemFavoritos(item, new ResultListener<Item>() {
-                    @Override
-                    public void onFinish(Item result) {
-                        Toast.makeText(getContext(), "ITEM AGREGADO A FAVORITOS " + result.getTitle(), Toast.LENGTH_SHORT)
-                                .show();
-                    }
-
-                    @Override
-                    public void onError(String mensaje) {
-                        Toast.makeText(getContext(), mensaje, Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        });
-        
-
 
         return view;
 
     }
-        //Metodos
 
-    public void cambiarBotonAgregar(){
+    /**
+     * EL METODO GRANDE
+     *
+     * @param item
+     */
+    public void checkItemFav(final Item item) {
+        //GetUsuario
+        usuarioController.getUsuarioME(new ResultListener<UsuarioME>() {
+            @Override
+            public void onFinish(UsuarioME result) {
+                Item elItemABuscar = null;
+                if (result.getListaFavoritos() != null) {
+                    for (Item itemBuscador : result.getListaFavoritos()) {
+                        if (itemBuscador.getId().equals(item.getId())) {
+                            elItemABuscar = itemBuscador;
+                        }
+                    } //Si la peli coincide
+                    if (elItemABuscar != null) {
+                        final Item finalElItemABuscar = elItemABuscar;
+                        buttonAgregarFavoritos.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                usuarioController.eliminarItemFavoritos(finalElItemABuscar, new ResultListener<Item>() {
+                                    @Override
+                                    public void onFinish(Item result) {
+                                        Toast.makeText(getContext(), result.getTitle() + " ELIMINADO DE FAVORITOS", Toast.LENGTH_SHORT)
+                                                .show();
+                                        checkItemFav(item);
+                                    }
+
+                                    @Override
+                                    public void onError(String mensaje) {
+                                        Toast.makeText(getContext(), mensaje, Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+                        });
+                        cambiarBotonAgregar();
+                    } else {
+                        buttonAgregarFavoritos.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                usuarioController.agregarItemFavoritos(item, new ResultListener<Item>() {
+                                    @Override
+                                    public void onFinish(Item result) {
+                                        Toast.makeText(getContext(), "ITEM AGREGADO A FAVORITOS " + result.getTitle(), Toast.LENGTH_SHORT)
+                                                .show();
+                                        checkItemFav(item);
+                                    }
+
+                                    @Override
+                                    public void onError(String mensaje) {
+                                        Toast.makeText(getContext(), mensaje, Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }
+
+            }
+
+            @Override
+            public void onError(String mensaje) {
+                Toast.makeText(getContext(), mensaje, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+    //Metodos
+
+    public void cambiarBotonAgregar() {
         buttonAgregarFavoritos.setText("ELIMINAR DE FAVORITOS");
     }
 
@@ -99,4 +152,5 @@ public class DetailFragment extends Fragment {
             textViewMercadoPago.setText("No acepta MercadoPago");
         }
     }
+
 }

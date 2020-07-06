@@ -44,6 +44,19 @@ public class UsuarioController {
             }
         });
     }
+    public void eliminarItemFavoritos(Item item, final ResultListener<Item> resultListenerFromView) {
+        usuarioMEDaoFirebase.eliminarItemFavoritos(item, new ResultListener<Item>() {
+            @Override
+            public void onFinish(Item result) {
+                resultListenerFromView.onFinish(result);
+            }
+
+            @Override
+            public void onError(String mensaje) {
+                resultListenerFromView.onError(mensaje);
+            }
+        });
+    }
 
     public void getUsuarioME(final ResultListener<UsuarioME> resultListenerFromView) {
         usuarioMEDaoFirebase.getUsuarioME(new ResultListener<UsuarioME>() {

@@ -48,8 +48,21 @@ public class UsuarioMEDaoFirebase {
 
     }
 
-    public void eliminarUsuario(UsuarioME usuarioME) {
+    public void eliminarItemFavoritos(final Item item, final ResultListener<Item> resultListenerFromController) {
+reference.document(mAuth.getCurrentUser().getUid())
+        .update("listaFavoritos",FieldValue.arrayRemove(item))
+        .addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                resultListenerFromController.onFinish(item);
 
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+    @Override
+    public void onFailure(@NonNull Exception e) {
+        resultListenerFromController.onError(e.getMessage());
+    }
+});
     }
 
     public void agregarItemFavoritos(final Item item, final ResultListener<Item> resultListenerFromController) {
@@ -83,7 +96,5 @@ public class UsuarioMEDaoFirebase {
             }
         });
     }
-    public void checkItemFav(Item item){
 
-    }
 }

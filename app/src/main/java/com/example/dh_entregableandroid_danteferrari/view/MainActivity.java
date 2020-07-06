@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements RecylerViewFragme
                     case R.id.Perfil:
                         pegarFragment(favoritosFragment);
                         break;
+                    case R.id.Inicio:
+                        pegarFragment(recylerViewFragment);
                 }
 
                 drawerLayoutMainActivity.closeDrawers();
