@@ -128,7 +128,6 @@ public class DetailFragment extends Fragment {
                         });
                     }
                 }
-
             }
 
             @Override
@@ -137,7 +136,6 @@ public class DetailFragment extends Fragment {
             }
         });
     }
-
 
     //Metodos
 

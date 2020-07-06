@@ -43,9 +43,7 @@
             android:id="@+id/FragmentLogin_EditText_Email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:hint="Correo Electronico"
-            />
-            <!--android:inputType="textEmailAddress"-->
+            android:hint="Correo Electronico" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -59,8 +57,8 @@
             android:id="@+id/FragmentLogin_EditText_Password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"/>
-            <!--android:inputType="textPassword"-->
+            android:hint="Contraseña" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
