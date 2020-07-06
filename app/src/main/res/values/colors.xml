@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#FF4C14</color>
+    <color name="colorAccent">#F85F27</color>
     <color name="noAcepta">#FF0000</color>
     <color name="Blanquito">#FFFFFF</color>
 </resources>

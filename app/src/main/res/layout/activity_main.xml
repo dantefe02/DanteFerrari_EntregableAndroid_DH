@@ -5,7 +5,7 @@
     android:id="@+id/activityMain_DrawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     tools:context=".view.MainActivity">
 

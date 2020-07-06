@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".view.DetailFragment"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorAccent">
 
     <ImageView
         android:id="@+id/FragmentDetail_ImageView_ImagenProducto"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
         android:scaleType="centerCrop" />
 
     <TextView
@@ -48,7 +48,8 @@
         android:text="Agregar a favoritos"
         android:layout_marginTop="17dp"
         android:layout_marginLeft="15dp"
-
+        android:textColor="@color/Blanquito"
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/FragmentDetail_Button_AgregarFavoritos" />
 
 
